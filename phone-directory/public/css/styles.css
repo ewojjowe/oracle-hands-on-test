@@ -45,12 +45,12 @@ header  p {
   text-align: center;
   margin: 2rem auto 0;
   height: 20px;
-  min-width: 400px;
+  min-width: 90%;
   background-color: #f6d9d9;
   color: #a52222;
   border: 1px solid #a52222;
   border-radius: 4px;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0;
 }
 
 #error i {
@@ -170,6 +170,9 @@ td {
   width: 100%;
   line-height: 2.4;
   height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .divider {
@@ -178,6 +181,10 @@ td {
 }
 
 @media(min-width: 725px) {
+  #error {
+    min-width: 500px;
+  }
+
   form {
     flex-direction: row;
     width: 600px;
