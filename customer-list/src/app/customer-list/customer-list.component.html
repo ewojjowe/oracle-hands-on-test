@@ -1,0 +1,20 @@
+<div class="form-container">
+  <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+    <div class="input-container">
+      <input type="text" placeholder="Name" formControlName="name"/>
+      <button
+        ngClass="{'is-empty': inputForm.get('name').valid}"
+        type="submit"
+      >
+        Add Customer
+      </button>
+    </div>
+
+    <ul
+      data-test-id="customer-list"
+      *ngIf="customerList.length > 0"
+    >
+      <li *ngFor="let customer of customerList">{{customer}}</li>
+    </ul>
+  </form>
+</div>

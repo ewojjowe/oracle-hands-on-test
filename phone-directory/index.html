@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phone Directory</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/HackerRank_Icon-1000px.png/800px-HackerRank_Icon-1000px.png">
+    <p>Phone Directory</p>
+  </header>
+  <div class="main-container">
+    <form id="addContactForm" action="#">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value=""
+      >
+      <input
+        type="number"
+        name="mobile"
+        placeholder="Mobile"
+        value=""
+      >
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        value=""
+      >
+      <button type="button" onClick="onSubmit(this.form)">Add Contact</button>
+    </form>
+    <div id="error" data-testid="error"><i class="fa fa-exclamation-triangle"></i>Invalid Input!</div>
+    <div class="card">
+      <h3>Contacts Summary</h3>
+        <table>
+          <!-- Table Created-->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+        </table>
+        <p class="divider"></p>
+        <table id="contactTable">
+          <tbody>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="index.js"></script>
+  </body>
+</html>

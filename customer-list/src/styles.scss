@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --green: #19A94D;  // Green
+  --white: #FFFFFF;  // White
+  --grey: #ECF0F0; // Grey
+  --dark-grey: #343D46; // Dark Grey
+  --light-grey: #DDE1E1; // Light Grey
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  // background-color: var(--grey);
+  background: rgb(240,244,244);
+  background: linear-gradient(90deg, rgba(240,244,244,1) 0%, rgba(242,245,245,1) 52%, rgba(253,254,254,1) 100%);
+}
