@@ -2,10 +2,7 @@
   <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
     <div class="input-container">
       <input type="text" placeholder="Name" formControlName="name"/>
-      <button
-        ngClass="{'is-empty': inputForm.get('name').valid}"
-        type="submit"
-      >
+      <button type="submit">
         Add Customer
       </button>
     </div>
