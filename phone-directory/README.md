@@ -13,7 +13,7 @@
 
 ## About: <a name = "about"></a>
 
-This project was created using [HTML](#), [CSS](#), and [Javascript](#)
+This project was created using [HTML](#), [CSS](#), and [Javascript](#). The site is serve using [NodeJS](#) server.
 
 ## Deliverables: <a name = "deliverables"></a>
 
