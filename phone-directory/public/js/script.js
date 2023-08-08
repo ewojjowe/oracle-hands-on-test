@@ -4,13 +4,23 @@ function onSubmit(form) {
 	let mobile = form.mobile.value;
 	let email = form.email.value;
 
+	let validType = ['Empty', 'Name', 'Mobile', 'Email', 'Valid']
+
 	// Get the error element
 	let errorElement = document.getElementById("error");
 
 	// Validate form input
-	if (validateFormInput(name, mobile, email)) {
+	let is_valid = validateFormInput(name, mobile, email)
+	if (validType[is_valid] === 'Valid') {
 		errorElement.style.display = "none";
 	} else {
+		let errorMsg = ""
+		if (is_valid === 0) {
+			errorMsg = "Please populate empty field"
+		} else {
+			errorMsg = 'Invalid ' + validType[is_valid]
+		}
+		errorElement.innerText = errorMsg
 		errorElement.style.display = "block";
 		return
 	}
@@ -48,7 +58,7 @@ function validateFormInput(name, mobile, email) {
 		|| !mobile
 		|| !email
 	) {
-		return false
+		return 0
 	}
 
 	/**
@@ -59,7 +69,7 @@ function validateFormInput(name, mobile, email) {
 	*/
 	let nameRegex = new RegExp("^[a-zA-Z ]+$")
 	if (!nameRegex.test(name) || name.length > 20) {
-		return false
+		return 1
 	}
 
 	/**
@@ -69,7 +79,7 @@ function validateFormInput(name, mobile, email) {
 	* - It should be equal to 10 characters in length.
 	*/
 	if (mobile.length !== 10) {
-		return false
+		return 2
 	}
 
 	/**
@@ -84,8 +94,8 @@ function validateFormInput(name, mobile, email) {
 	*/
 	let emailRegex = new RegExp("^[a-zA-Z][a-zA-Z0-9.]{1,9}@[a-zA-Z]{2,20}\.[a-zA-Z]{2,10}$")
 	if (!emailRegex.test(email)) {
-		return false
+		return 3
 	}
 
-	return true
+	return 4
 }
